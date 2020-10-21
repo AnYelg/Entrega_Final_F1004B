@@ -4,9 +4,9 @@ import streamlit as st
 
 def prin():
     st.title("Simulador del Volcán")
-    diamet = st.slider("Diametro del proyectil",0.02,0.06,0.06 )
-    densidad = st.slider("Densidad", 2100,2800,2300)
-    temperatura = st.slider("Temperatura del ambiente", 10,50,20)
+    diamet = st.slider("Diametro del proyectil",0.2,0.6,0.6 )
+    densidad = st.slider("Densidad", 2100,2600,2300)
+    temperatura = st.slider("Temperatura del ambiente",0,50,21)
     velocidad_in = st.slider("Velocidad Inicial",250,500)
     grados = st.slider ("Grados", 40,90,45)
     tiempo_v = st.slider ("Tiempo de vuelo", 0.0 , 10.0, 0.5)

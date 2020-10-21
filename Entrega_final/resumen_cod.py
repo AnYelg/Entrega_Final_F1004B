@@ -15,7 +15,7 @@ def prin ():
     st.markdown("Toda la siguiente parte es el código para crear la gráfica, poner el titulo, una cuadricula y los limites de x y y.")
     st.image("imagen3.jpg")
     st.image("graf1.jpg",caption="Gráfica sin resistencia al aire")
-    st.markdown("Aquí meteremos otras variables para hacer la gráfica con resistencia al aire. Las ecuaciones para calcular la densidad del aire, el coeficiente de arrastre, la estimación de la temperatura del volcán en una erupción se obtuvieron en la monografía escrita por Martín Del Pozzo. La densidad del proyectil se obtuvo en el artículo de Diana Rodriguez, Gustavo Córdoba y Antonio Costa.")
+    st.markdown("En la siguiente parte del código se establecen las variables que afectarán al proyectil en un caso de la vida real. Para saber las dimensiones de un balístico lanzado por el Popocatépetl, se hizo un análisis de fragmentos de proyectiles con mayor distancia del cráter. Fueron mandados a un laboratorio para calcular mejor los datos. (del Pozzo, 2017) ")
     st.image("imagen4.jpg")
     st.markdown("Vamos a definir D, que es la contante de la resitencia al aire. La equación es la siguiente:")
     st.latex(r"""D = \frac{\rho \cdot C\cdot A}{2} """ )
