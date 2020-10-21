@@ -5,9 +5,9 @@ import streamlit as st
 def prin():
     st.title("Simulador del Volcán")
     diamet = st.slider("Diametro del proyectil",0.2,0.6,0.6 )
-    densidad = st.slider("Densidad", 2100,2600,2300)
+    densidad = st.slider("Densidad del proyectil", 2100,2600,2300)
     temperatura = st.slider("Temperatura del ambiente",0,50,21)
-    velocidad_in = st.slider("Velocidad Inicial",250,500)
+    velocidad_in = st.slider("Velocidad Inicial",110,250)
     grados = st.slider ("Grados", 40,90,45)
     tiempo_v = st.slider ("Tiempo de vuelo", 0.0 , 10.0, 0.5)
 
@@ -29,7 +29,7 @@ def prin():
 
     r_x, r_y = proyectile_no_drag(v_0, theta_deg, y_0,t)
 
-
+    
 
     max_x = np.amax(r_x)
     max_y = (np.amax(r_y) + 500)
@@ -39,10 +39,10 @@ def prin():
     plt.title("Trayectoria del Proyectil")
     plt.grid()
     plt.axis('scaled')
-    x_ticks = plt.xticks(np.arange(0,max_x,500))
-    y_ticks = plt.yticks(np.arange(0,max_y,500))
-    x_limt = plt.xlim([0,max_x])
-    y_limt = plt.ylim([0,max_y])
+    _ = plt.xticks(np.arange(0,max_x,500))
+    _ = plt.yticks(np.arange(0,max_y,500))
+    _ = plt.xlim([0,max_x])
+    _ = plt.ylim([0,max_y])
 
 
     r = (diamet/2) #radio del proyectil
@@ -133,6 +133,12 @@ def prin():
 
     max_y_list = np.amax(y_list)
 
+
+    for i in (y_list):
+        if i<0:
+            b=y_list.index (i)
+            break
+    
     plt.plot(r_x,r_y, label="Sin Resistencia de Aire")
     plt.plot(x_list,y_list, label="Con Resistencia de Aire")
     plt.axis('scaled')
@@ -144,7 +150,8 @@ def prin():
     _ = plt.legend()
     st.pyplot(plt)
     max_y = np.amax(r_y)
-    st.write("La altura máxima del proyectil sin resistencia al aire es:",max_y, "m")
-    st.write("La altura máxima del proyectil con resistencia al aire es:",max_y_list, "m")
+    st.write("La altura máxima del proyectil sin resistencia al aire es:","{0:.2f}".format(max_y),"m")
+    st.write("La altura máxima del proyectil con resistencia al aire es:","{0:.2f}".format(max_y_list),"m")
+    st.write("La distancia que llegó el proyectil con resistencia al aire al tocar el suelo es:","{0:.2f}".format(x_list[b]),"m")
 
     
