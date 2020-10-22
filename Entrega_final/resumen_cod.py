@@ -1,7 +1,9 @@
 import streamlit as st
 def prin (): 
     st.title("Resumen del codigo hecho")
-    st.markdown("Muchos tipos de rocas son expulsadas por un volcán al momento de la explosión (como obsidiana, lapilli, escoria, etc.). Estas rocas pueden medir de 2mm hasta 7mm aproximadamente. (Sieron, s.f.) Para este proyecto se enfocará en el Popocatépetl. Los proyectiles lanzados por este volcán tienen angulos entre 40° y 90° (del Pozzo, 2017). Tiene una altura de 5426 m sobre el nivel del mar y una prominencia de 3800 m. (del Pozzo, 2017)")
+    st.markdown("Muchos tipos de rocas son expulsadas por un volcán al momento de la explosión (como obsidiana, lapilli, escoria, etc.). Estas rocas pueden medir de 2mm hasta 7mm aproximadamente. (Sieron, s.f.) Este proyecto se enfocará en el Popocatépetl. Los proyectiles lanzados por este volcán tienen angulos entre 40° y 90° (del Pozzo, 2017). Tiene una altura de 5426 m sobre el nivel del mar y una prominencia de 3800 m. (del Pozzo, 2017)")
+    st.markdown("El rango de velocidad fue recuperado de un documento de la UNAM.")
+    st.image("Tabla2.jpg",caption="Tabla de datos recuperados de videos de erupciones del Popocatéptl. Se utilizaron como parametro la velocidad mínima y máxima encontradas en esta tabla ubicada en la página 82. (del Pozzo, 2017)")
     st.markdown("En la primera parte del código se tienen que importar las librerias que se ocuparan y el nombre en el cual lo vas a exportar, por ejemplo numpy se exportó con el nombre de np. Numpy ayuda para escribir raices cuadradas, seno y coseno. Matplot podrá plasmar las gráficas necesarias.")
     st.image("imagen1.jpg")
     st.markdown("Se va a crear una función, la cuál falicitará hacer la gráfica más adelante. Lo que hace la función es convertir los grados a radianes, calcular la velocidad inicial en x, calcular la velocidad inicial en y, calcular la posición inicial en x y calcular la posición inicial en y.")

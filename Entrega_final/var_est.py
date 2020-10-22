@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 import streamlit as st
 
 def prin ():
+    st.title("Resultados del código")
+    st.header("Gráficas")
     v_0 =250   
     theta_deg=45   
     y_0=3800        

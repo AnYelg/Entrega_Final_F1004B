@@ -7,7 +7,7 @@ import primer as vdj
 PAGES = {
     "¿Qué es un videojuego serio?" : vdj,
     "Resumen del codigo hecho" : res,
-    "Resultados del primer código" : prime,
+    "Resultados del código" : prime,
     "Simulador del Volcán" : simulador,
     
     
